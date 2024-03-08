@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timetables</title>
+<link
+      rel="shortcut icon"
+      href="./htimages/WELLINGTON.png"
+      type="image/x-icon">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .background {
+        background-color: rosybrown;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        animation: rotate 10s linear step-end;
+    }
+
+    @keyframes rotate {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(180deg);}
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .faculty {
+        margin: 20px;
+        padding: 10px;
+        background: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button {
+        padding: 10px 20px;
+        background: skyblue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="background">
+</div>
+<div class="content">
+    <h1>Timetables</h1>
+    <div class="faculty" onclick="downloadPDF('./Timetable pdf/BTCT 2 EVENING   TIME TABLE UPDATED.pdf')">
+        <h3>Applied Science</h3>
+        <button>Download Timetable</button>
+    </div>
+    <div class="faculty" onclick="downloadPDF('./Timetable pdf/MSETT 23.24(19.02)_FAST.pdf')">
+        <h3>Health Science</h3>
+        <button>Download Timetable</button>
+    </div>
+    <div class="faculty" onclick="downloadPDF('./Timetable pdf/RESIT TIME TABLE AND SPECIAL EXAMS.pdf')">
+        <h3>Engineering and Technology</h3>
+        <button>Download Timetable</button>
+    </div>
+</div>
+
+<script>
+
+    function downloadPDF(pdfName) {
+        // Construct the file path to the PDF file
+        let filePath = './' + pdfName; // Assuming the PDF files are in the same directory
+        // Redirect to the PDF file for download
+        window.location.href = filePath;
+    }
+
+    function downloadPDF(pdfName) {
+        // Simulate PDF download by redirecting to the PDF file
+        window.location.href = pdfName;
+    }
+</script>
+
+</body>
+</html>

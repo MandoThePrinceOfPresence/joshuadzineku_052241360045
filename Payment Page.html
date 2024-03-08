@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment</title>
+<link 
+rel="shortcut icon"
+      href="./htimages/WELLINGTON.png"
+      type="image/x-icon">
+<link rel="stylesheet" href="./css/payment page.css">
+</head>
+<body>
+<div class="container">
+  <h1>Fees Payment</h1>
+  <p>Please Enter Your Payment Details below:</p>
+  <form id="paymentForm">
+    <label for="studentIndex">Index Number:</label>
+    <input type="text" id="studentIndex" name="studentIndex"><br><br>
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" name="studentName"><br><br>
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount"><br><br>
+    <label for="feeType">Select Fee Type:</label>
+    <select id="feeType" name="feeType">
+      <option value="school">School Fees</option>
+      <option value="hostel">Hostel Fees</option>
+      <option value="faculty">Faculty Dues</option>
+      <option value="Course Registration Fees">Course Registration Fees</option>
+    </select><br><br>
+    <button type="submit" id="payButton">Pay Now</button>
+  </form>
+</div>
+
+<script src="./sass/The Payment Page.js"></script>
+</body>
+</html>
